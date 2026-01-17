@@ -13,5 +13,5 @@ esac
 
 IMAGE="ghcr.io/aramann/tg-api:${ARCH}"
 
-docker build -t "$IMAGE" .
+docker build --provenance=false --platform linux/${ARCH} -t "$IMAGE" .
 docker push "$IMAGE"
