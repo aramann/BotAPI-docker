@@ -2,6 +2,7 @@ services:
   tg-api:
     restart: unless-stopped
     image: ghcr.io/aramann/tg-api:latest
+    container_name: tg-api
     ports:
       - "127.0.0.1:8082:8082"
     environment:
